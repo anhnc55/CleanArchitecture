@@ -61,7 +61,7 @@ open class APIBase {
         manager = Alamofire.Session(configuration: configuration)
     }
     
-    open func request<T: Decodable>(_ input: APIInputBase) -> AnyPublisher<APIResponse<T>, Error> {
+    open func request<T: Codable>(_ input: APIInputBase) -> AnyPublisher<APIResponse<T>, Error> {
         let response: AnyPublisher<APIResponse<JSONDictionary>, Error> = requestJSON(input)
         
         return response
@@ -78,13 +78,13 @@ open class APIBase {
             .eraseToAnyPublisher()
     }
     
-    open func request<T: Decodable>(_ input: APIInputBase) -> AnyPublisher<T, Error> {
+    open func request<T: Codable>(_ input: APIInputBase) -> AnyPublisher<T, Error> {
         request(input)
             .map { $0.data }
             .eraseToAnyPublisher()
     }
 
-    open func request<T: Codable>(_ input: APIInputBase) -> AnyPublisher<APIResponse<[T]>, Error> {
+    open func requestJSONArray<T: Codable>(_ input: APIInputBase) -> AnyPublisher<APIResponse<[T]>, Error> {
         let response: AnyPublisher<APIResponse<JSONArray>, Error> = requestJSON(input)
 
         return response
@@ -103,8 +103,8 @@ open class APIBase {
             .eraseToAnyPublisher()
     }
     
-    open func request<T: Decodable>(_ input: APIInputBase) -> AnyPublisher<[T], Error> {
-        request(input)
+    open func requestJSONArray<T: Codable>(_ input: APIInputBase) -> AnyPublisher<[T], Error> {
+        requestJSONArray(input)
             .map { $0.data }
             .eraseToAnyPublisher()
     }

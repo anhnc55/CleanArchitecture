@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import Backend
 
 // MARK: - GetRepoList
 extension API {
@@ -31,7 +32,7 @@ extension API {
         }
     }
     
-    final class GetRepoListOutput: Decodable {
+    final class GetRepoListOutput: Codable {
         private(set) var repos: [Repo]?
         private enum CodingKeys: String, CodingKey {
             case repos = "items"

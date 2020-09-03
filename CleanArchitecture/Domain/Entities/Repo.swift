@@ -17,7 +17,7 @@ struct Repo {
     var folkCount: Int?
     var owner: Owner?
     
-    struct Owner: Decodable {
+    struct Owner: Codable {
         var avatarUrl: String?
         private enum CodingKeys: String, CodingKey {
             case avatarUrl = "avatar_url"
@@ -31,7 +31,7 @@ extension Repo: Then, Equatable {
     }
 }
 
-extension Repo: Decodable {
+extension Repo: Codable {
     private enum CodingKeys: String, CodingKey {
         case id, name
         case fullname = "full_name"

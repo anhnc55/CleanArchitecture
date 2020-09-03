@@ -8,6 +8,7 @@
 
 import Combine
 import Foundation
+import Backend
 
 protocol RepoGatewayType {
     func getRepos(dto: GetPageDto) -> Observable<PagingInfo<Repo>>
