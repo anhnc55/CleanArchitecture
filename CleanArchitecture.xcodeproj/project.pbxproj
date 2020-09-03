@@ -131,7 +131,7 @@
 		1B425EAC24FF8D1A000F7F6B /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1B425EAB24FF8D1A000F7F6B /* SDWebImageMapKit */; };
 		1B425EAF24FF9058000F7F6B /* ESPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1B425EAE24FF9058000F7F6B /* ESPullToRefresh */; };
 		1BD163F124FF8CA700EBC063 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 1BD163F024FF8CA700EBC063 /* MBProgressHUD */; };
-		FFF491482500767D00C59D7D /* Backend in Frameworks */ = {isa = PBXBuildFile; productRef = FFF491472500767D00C59D7D /* Backend */; };
+		FFF491522500835C00C59D7D /* Backend in Frameworks */ = {isa = PBXBuildFile; productRef = FFF491512500835C00C59D7D /* Backend */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,7 +263,7 @@
 		17DCF1B524BEE76800D970B4 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		17DCF1B824BF01ED00D970B4 /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
 		17DCF1BA24BF028200D970B4 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
-		FFF491452500764700C59D7D /* Backend */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Backend; path = ../../../../Backend; sourceTree = "<group>"; };
+		FFF491502500832300C59D7D /* Backend */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backend; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,7 +274,7 @@
 				174A188A24C81EEA00AB39D9 /* SwiftUIRefresh in Frameworks */,
 				1B425EAF24FF9058000F7F6B /* ESPullToRefresh in Frameworks */,
 				1BD163F124FF8CA700EBC063 /* MBProgressHUD in Frameworks */,
-				FFF491482500767D00C59D7D /* Backend in Frameworks */,
+				FFF491522500835C00C59D7D /* Backend in Frameworks */,
 				177428D524F3691B00C141E4 /* ValidatedPropertyKit in Frameworks */,
 				176BAA5F24D2690300324D3C /* Alamofire in Frameworks */,
 				176BAA4F24D1326100324D3C /* Then in Frameworks */,
@@ -559,7 +559,7 @@
 		1787231824BD53A400D90F8E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				173865AB24D3BC840059E3AD /* API+Repo.swift */,
+				FFF4914A25007D3E00C59D7D /* API */,
 				1787235924BD577C00D90F8E /* Gateways */,
 			);
 			path = Data;
@@ -729,7 +729,7 @@
 		FFF491442500762200C59D7D /* Package */ = {
 			isa = PBXGroup;
 			children = (
-				FFF491452500764700C59D7D /* Backend */,
+				FFF491502500832300C59D7D /* Backend */,
 			);
 			path = Package;
 			sourceTree = "<group>";
@@ -739,6 +739,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFF4914A25007D3E00C59D7D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				173865AB24D3BC840059E3AD /* API+Repo.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -770,7 +778,7 @@
 				1B425EA924FF8D1A000F7F6B /* SDWebImage */,
 				1B425EAB24FF8D1A000F7F6B /* SDWebImageMapKit */,
 				1B425EAE24FF9058000F7F6B /* ESPullToRefresh */,
-				FFF491472500767D00C59D7D /* Backend */,
+				FFF491512500835C00C59D7D /* Backend */,
 			);
 			productName = CleanArchitecture;
 			productReference = 178722F324BD537D00D90F8E /* CleanArchitecture.app */;
@@ -1413,7 +1421,7 @@
 			package = 1BD163EF24FF8CA700EBC063 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
 			productName = MBProgressHUD;
 		};
-		FFF491472500767D00C59D7D /* Backend */ = {
+		FFF491512500835C00C59D7D /* Backend */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Backend;
 		};
